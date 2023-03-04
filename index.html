@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swipe</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <style>
+        * {padding: 0; margin: 0;}
+        li {list-style: none;}
+        a {text-decoration: none; color: #000;}
+        .wrap {width: 100%; margin: 0 auto;}
+        .inner {width: 1400px; margin: 0 auto;}
+        .section_slider {width: 100%; padding: 50px 0;}
+        .section_slider .topBox {width: 100%; text-align: center; margin-bottom: 50px;}
+        .section_slider .topBox .title {font-size: 50px; margin-bottom: 10px; letter-spacing: -5px;}
+        .section_slider .topBox .txt {font-size: 28px; color: #888; font-weight: 500;}
+        .section_slider .swiper-container {width: 80%; margin: 0 auto; height: 600px; position: relative;}
+        .section_slider .swiper-container .swiper-wrapper {width: 100%;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide {position: relative;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .imgBox {width: 70%; position: relative;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .imgBox img {width: 100%;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .imgBox .squer {display: block; width: 200px; height: 100%; background: rgba(255,255,255,.7); position: absolute; right: 0; top: 0; z-index: 100;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .txtBox {width: 40%; position: absolute; right: 0; top: 20%; z-index: 200;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .txtBox h2 {font-size: 38px; margin-bottom: 30px; letter-spacing: -2px;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .txtBox h2 span {display: block; text-transform: uppercase; font-size: 48px;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .txtBox p {text-align: justify;}
+        .section_slider .swiper-container .swiper-wrapper .swiper-slide .num {font-size: 120px; font-weight: 900; color: rgba(16,47,65,0.08); position: absolute; right: 0; bottom: 0; z-index: 1;}
+        .section_slider .swiper-container .swiper-button-next, .section_slider .swiper-container .swiper-button-prev {width: 50px; height: 50px; background-image: none; background-color: #e4e4e4; z-index: 100; cursor: pointer;}
+        .section_slider .swiper-container .swiper-button-next {position: absolute; top: 3.7%; right: 0;}
+        .section_slider .swiper-container .swiper-button-prev {position: absolute; top: 3.7%; left: 0;}
+        .section_slider .swiper-container .swiper-button-next i, .section_slider .swiper-container .swiper-button-prev i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #000; transition: all 0.3s ease-in-out;}
+
+        @keyframes arrowRight {
+            0% {transform: translate(0%, 50%);}
+            50% {transform: translate(-10%, -50%);}
+            100% {transform: translate(0%, -50%);}
+        }
+        .section_slider .swiper-container .swiper-button-prev:hover i, .section_slider .swiper-container .swiper-button-next:hover i {-webkit-animation: arrowRight 1s infinite; animation: arrowRight 1s infinite;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="inner">
+            <div class="section_slider">
+                <div class="topBox">
+                    <h2 class="title">실전! 웹사이트제작 STEP BY STEP!</h2>
+                    <p class="txt">함께 제작 해 볼 클론코딩 사이트입니다.</p>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- slider1 -->
+                        <div class="swiper-slide">
+                            <div class="imgBox" data-swiper-parallax-y="70%">
+                                <img src="img/slide_01.jpg" alt="">
+                                <span class="squer"  data-swiper-parallax-y="70%"></span>
+                            </div>
+                            <div class="txtBox" data-swiper-parallax-x="-60%">
+                                <h2><span>Daebang</span> Clone Cording</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique aut vitae, totam expedita, voluptatem voluptatum sequi corporis explicabo laudantium quo ducimus repudiandae inventore tenetur. Earum autem provident doloribus facere?</p>
+                            </div>
+                            <p class="num" data-swiper-parallax-y="-60%">01</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBox" data-swiper-parallax-y="70%">
+                                <img src="img/slide_02.jpg" alt="">
+                                <span class="squer"  data-swiper-parallax-y="70%"></span>
+                            </div>
+                            <div class="txtBox" data-swiper-parallax-x="-60%">
+                                <h2><span>Daebang</span> Clone Cording</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique aut vitae, totam expedita, voluptatem voluptatum sequi corporis explicabo laudantium quo ducimus repudiandae inventore tenetur. Earum autem provident doloribus facere?</p>
+                            </div>
+                            <p class="num" data-swiper-parallax-y="-60%">02</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBox" data-swiper-parallax-y="70%">
+                                <img src="img/slide_03.jpg" alt="">
+                                <span class="squer"  data-swiper-parallax-y="70%"></span>
+                            </div>
+                            <div class="txtBox" data-swiper-parallax-x="-60%">
+                                <h2><span>Daebang</span> Clone Cording</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique aut vitae, totam expedita, voluptatem voluptatum sequi corporis explicabo laudantium quo ducimus repudiandae inventore tenetur. Earum autem provident doloribus facere?</p>
+                            </div>
+                            <p class="num" data-swiper-parallax-y="-60%">03</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBox" data-swiper-parallax-y="70%">
+                                <img src="img/slide_04.png" alt="">
+                                <span class="squer"  data-swiper-parallax-y="70%"></span>
+                            </div>
+                            <div class="txtBox" data-swiper-parallax-x="-60%">
+                                <h2><span>Daebang</span> Clone Cording</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique aut vitae, totam expedita, voluptatem voluptatum sequi corporis explicabo laudantium quo ducimus repudiandae inventore tenetur. Earum autem provident doloribus facere?</p>
+                            </div>
+                            <p class="num" data-swiper-parallax-y="-60%">04</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js'></script>
+    <script src="js/slide.js"></script>
+</body>
+</html>
